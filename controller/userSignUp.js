@@ -45,7 +45,7 @@ async function userSignUpController(req,res){
     }
     catch(err) {
         res.json({
-            message :  err.message,
+            message :  err.message || err,
             error : true,
             success : false,
 

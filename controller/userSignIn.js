@@ -1,3 +1,5 @@
+const bcrypt = require('bcryptjs')
+
 async function userSignInController(req,res){
     try{
 
@@ -15,6 +17,8 @@ async function userSignInController(req,res){
         if(!user){
             throw new Error("User not found")
         }
+
+        const checkPassword = bcrypt.compare(password,user.password)
 
     }
     catch(err){

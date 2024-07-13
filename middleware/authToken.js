@@ -5,7 +5,7 @@ async function authToken(req,res,next){
         
         const token = req.cookies?.token || req.header
 
-        console.log("token" , token)
+        console.log("token" , req.cookies)
 /* 
           jwt.verify(token, process.env.TOKEN_SECRET_KEY, function(err, decoded) {
             console.log(err)
